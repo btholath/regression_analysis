@@ -24,6 +24,15 @@ Y = df.iloc[:,  -1]
 
 
 # Create the Training and Test datasets
+"""
+X → your input features (e.g., hours studied).
+Y → your target labels (e.g., marks).
+
+test_size=0.3 → 30% of the dataset will be set aside for testing, 70% for training.
+random_state=1234 → fixes the random shuffle, so results are reproducible.
+
+Returns → (x_train, x_test, y_train, y_test).
+"""
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test =     \
 train_test_split (X, Y, test_size = 0.3, random_state=1234)
